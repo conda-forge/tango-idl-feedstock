@@ -1,17 +1,16 @@
 {% set name = "tango-idl" %}
 {% set version = "5.1.0" %}
-{% set sha256 = "864dc73510fea5d71c8d7120ecb0d0df13510b37319120367305b94490b5751e" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/tango-controls/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://gitlab.com/tango-controls/tango-idl/-/archive/{{ version }}/tango-idl-{{ version }}.tar.gz
+  sha256: 864dc73510fea5d71c8d7120ecb0d0df13510b37319120367305b94490b5751e
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -39,7 +38,7 @@ about:
     provide services to the control system all over the network, such as
     hardware control or data processing.
   doc_url: https://tango-controls.readthedocs.io/
-  dev_url: https://github.com/tango-controls/tango-idl
+  dev_url: https://gitlab.com/tango-controls/tango-idl
 
 extra:
   recipe-maintainers:

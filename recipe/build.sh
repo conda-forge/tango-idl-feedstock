@@ -1,9 +1,8 @@
 mkdir build
 cd build
 
-# Use -DCMAKE_INSTALL_LIBDIR=lib to install tangoidl.pc under lib/pkgconfig
-# and not lib64/pkgconfig
-cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=$PREFIX \
-      -DCMAKE_INSTALL_LIBDIR=lib \
-      ..
+# CMAKE_ARGS adds variables defined by conda-forge internally like:
+# -DCMAKE_INSTALL_LIBDIR=lib and -DCMAKE_INSTALL_PREFIX
+# It is required to cross-compile to osx-arm64
+cmake ${CMAKE_ARGS} ..
 make install
