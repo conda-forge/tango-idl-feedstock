@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tango-idl-feeds
 
 Summary: This is the Tango CORBA IDL file
 
-Development: https://github.com/tango-controls/tango-idl
+Development: https://gitlab.com/tango-controls/tango-idl
 
 Documentation: https://tango-controls.readthedocs.io/
 
