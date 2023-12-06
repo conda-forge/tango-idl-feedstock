@@ -3,11 +3,11 @@ MACOSX_DEPLOYMENT_TARGET:
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge tango-idl_dev
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '16'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 target_platform:

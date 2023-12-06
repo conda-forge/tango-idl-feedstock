@@ -1,11 +1,11 @@
-About tango-idl
-===============
+About tango-idl-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tango-idl-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.tango-controls.org
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tango-idl-feedstock/blob/main/LICENSE.txt)
 
 Summary: This is the Tango CORBA IDL file
 
@@ -104,14 +104,14 @@ Current release info
 Installing tango-idl
 ====================
 
-Installing `tango-idl` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `tango-idl` from the `conda-forge/label/tango-idl_dev` channel can be achieved by adding `conda-forge/label/tango-idl_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/tango-idl_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `tango-idl` can be installed with `conda`:
+Once the `conda-forge/label/tango-idl_dev` channel has been enabled, `tango-idl` can be installed with `conda`:
 
 ```
 conda install tango-idl
@@ -126,26 +126,26 @@ mamba install tango-idl
 It is possible to list all of the versions of `tango-idl` available on your platform with `conda`:
 
 ```
-conda search tango-idl --channel conda-forge
+conda search tango-idl --channel conda-forge/label/tango-idl_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search tango-idl --channel conda-forge
+mamba search tango-idl --channel conda-forge/label/tango-idl_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search tango-idl --channel conda-forge
+mamba repoquery search tango-idl --channel conda-forge/label/tango-idl_dev
 
 # List packages depending on `tango-idl`:
-mamba repoquery whoneeds tango-idl --channel conda-forge
+mamba repoquery whoneeds tango-idl --channel conda-forge/label/tango-idl_dev
 
 # List dependencies of `tango-idl`:
-mamba repoquery depends tango-idl --channel conda-forge
+mamba repoquery depends tango-idl --channel conda-forge/label/tango-idl_dev
 ```
 
 
@@ -167,7 +167,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
