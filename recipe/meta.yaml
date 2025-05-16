@@ -1,5 +1,5 @@
 {% set name = "tango-idl" %}
-{% set version = "6.0.2" %}
+{% set version = "6.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/tango-idl/-/archive/{{ version }}/tango-idl-{{ version }}.tar.gz
-  sha256: 490ca710957b69fa412e04534ec06f8f1925dbe681df520469637ba12e15737a
+  sha256: 38741575ae33fdeb816f77234fa4b28e9e6c83884e20f1037eecd000250ba094
 
 build:
   number: 0
