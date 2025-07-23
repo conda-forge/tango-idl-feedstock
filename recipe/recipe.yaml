@@ -24,19 +24,20 @@ requirements:
     - ${{ compiler('cxx') }}
 
 tests:
-  - script:
-      - if: unix
-        then: test -f $PREFIX/include/tango.idl
-      - if: unix
-        then: test -f $PREFIX/lib/pkgconfig/tangoidl.pc
-      - if: win
-        then: if not exist %LIBRARY_INC%\tango.idl exit 1 .
-      - if: win
-        then: if not exist %LIBRARY_LIB%\pkgconfig\tangoidl.pc exit 1
+  - package_contents:
+      include:
+        - tango.idl
+      files:
+        - if: unix
+          then:
+            - lib/pkgconfig/tangoidl.pc
+            - lib/cmake/tangoidl/tangoidlConfig.cmake
+        - if: win
+          then:
+            - Library/lib/pkgconfig/tangoidl.pc
+            - Library/lib/cmake/tangoidl/tangoidlConfig.cmake
 
 about:
-  license: LGPL-3.0-or-later
-  license_file: LICENSE
   summary: This is the Tango CORBA IDL file
   description: |
     TANGO is an object oriented distributed control system. It allows
@@ -44,6 +45,8 @@ about:
     computer or distributed over the network. These processes can
     provide services to the control system all over the network, such as
     hardware control or data processing.
+  license: LGPL-3.0-or-later
+  license_file: LICENSE
   homepage: http://www.tango-controls.org
   repository: https://gitlab.com/tango-controls/tango-idl
   documentation: https://tango-controls.readthedocs.io/
