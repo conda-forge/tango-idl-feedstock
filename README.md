@@ -3,7 +3,7 @@ About tango-idl-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tango-idl-feedstock/blob/main/LICENSE.txt)
 
-Home: http://www.tango-controls.org
+Home: http://www.tango-controls.org/
 
 Package license: LGPL-3.0-or-later
 
@@ -18,7 +18,6 @@ communication between TANGO device processes running on the same
 computer or distributed over the network. These processes can
 provide services to the control system all over the network, such as
 hardware control or data processing.
-
 
 Current build status
 ====================

@@ -1,0 +1,57 @@
+schema_version: 1
+
+context:
+  name: tango-idl
+  version: 6.0.4
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://gitlab.com/tango-controls/tango-idl/-/archive/${{ version }}/tango-idl-${{ version }}.tar.gz
+  sha256: 0e6df8ebbfb21ee218d71d55d7e3ac6128ad07d55e8e1f60a611a8088f05b12d
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - cmake
+    - if: unix
+      then: make
+    - ${{ stdlib('c') }}
+    - ${{ compiler('cxx') }}
+
+tests:
+  - package_contents:
+      include:
+        - tango.idl
+      files:
+        - if: unix
+          then:
+            - lib/pkgconfig/tangoidl.pc
+            - lib/cmake/tangoidl/tangoidlConfig.cmake
+        - if: win
+          then:
+            - Library/lib/pkgconfig/tangoidl.pc
+            - Library/lib/cmake/tangoidl/tangoidlConfig.cmake
+
+about:
+  summary: This is the Tango CORBA IDL file
+  description: |
+    TANGO is an object oriented distributed control system. It allows
+    communication between TANGO device processes running on the same
+    computer or distributed over the network. These processes can
+    provide services to the control system all over the network, such as
+    hardware control or data processing.
+  license: LGPL-3.0-or-later
+  license_file: LICENSE
+  homepage: http://www.tango-controls.org
+  repository: https://gitlab.com/tango-controls/tango-idl
+  documentation: https://tango-controls.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - beenje
+    - bourtemb
